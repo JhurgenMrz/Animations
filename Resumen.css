@@ -1,0 +1,39 @@
+* {
+    /* Transitions */
+    /* transition es una propiedad de CSS3 para crear animaciones. */
+    
+    /* Ha partir de un evento en el navegador es posible hacer que las propiedades CSS de un elemento en el DOM cambien de forma continua.  */
+    /* Por ejemplo un elemento de tamaño ‘x’ a tamaño ‘y’ en una determinada cantidad de tiempo, o de un color a otro, etc. */
+    
+    /*Qué propiedades va a cambiar en la transición*/
+    transition-property: width, height;
+    
+    /*Cuánto tiempo va a durar la transición*/
+    transition-duration: 1s;
+    
+    /*Cuánto tiempo va a tardar la transición en ocurrir*/
+    transition-delay: 250ms;
+    
+    /*Función que determina de qué forma se calculan los valores intermedios de la transición*/
+    transition-timing-function: ease;
+
+    /* Rotar elemento = rotate(grados)
+    Sesgar elemento = skew(grados)
+    Cambiar posición = translate(pixeles)
+    Cambiar tamaño = scale(1 = 100%, 2 = 200%, 0 ) */
+    
+    /* transform rotate */
+    /* Rotacion en el eje X */
+    transform: rotateX(45deg);
+    /* Rotacion en el eje Y */
+    transform: rotateY(45deg);
+    /* rotacion a lado contrario a las manicillas del reloj */
+    transform: rotate(-45deg);
+    /* Anidando transform rotate */
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+
+    /* Rotacion en 3D, se coloca 1 en los grados que se desea girar */
+    /* transform: rotate3d(x,y,z,rotate); */
+    transform: rotate3d(1,0,0,45deg)
+
+}

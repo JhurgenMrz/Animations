@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tranformacion Sesgado</title>
+    <title>Tranformacion Punto de origen</title>
     <link rel="stylesheet" href="../style.css">
     <style>
     body{
@@ -27,12 +27,19 @@
         border: 1px solid black;
     }
     .container:hover .event{
-        /* transform: skew(x,y) */
-        /* si es solo un valor es en x */
-        /* transform: skew(45deg) */
-        /* transform: skew(10deg,10deg) */
-        transform: skew(10deg,10deg)
-
+        /* transform-origin: x y  */
+        /* transform-origin: 50% 50%  */
+        /* transform-origin: top; */
+        /* transform-origin: left; */
+        /* transform-origin: right; */
+        /* transform-origin: bottom; */
+        /* transform-origin: left top; */
+        transform-origin: left top;
+        /* transform: rotate3d( 1, 1 , 1, 60deg)         */
+        /* transform: rotateY(-45deg) */
+        /* transform: rotateX(45deg) */
+        transform: rotateZ(45deg)
+        
     }
     .event{
         transition: .3s;

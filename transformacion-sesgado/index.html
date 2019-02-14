@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tranformacion Sesgado</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: white;
+        font-family: Arial;
+        perspective: 400px;
+        /* perspective por defecto es en el centro */
+        /* perspective-origin: top; */
+        /* perspective-origin: bottom; */
+        /* perspective-origin: left; */
+        /* perspective-origin: right; */
+        /* perspective-origin: left bottom; */
+        perspective-origin: center;
+    }
+    .container{
+        border: 1px solid black;
+    }
+    .container:hover .event{
+        /* transform: skew(x,y) */
+        /* si es solo un valor es en x */
+        /* transform: skew(45deg) */
+        transform: skew(10deg,10deg)
+
+    }
+    .event{
+        transition: .3s;
+        
+    }
+
+    .cuadrado{
+        width: 200px;
+        height: 200px;
+        background: #7dc900;
+        margin: 20px;
+        transition: .3s;
+    }
+    </style>
+
+</head>
+<body>
+<div class="event-list">
+    <div class="container">
+        <article class="event">
+                <figure class="events-image">
+                    <img src="../image/Fox.SVG" width="600" height="500" alt="">
+                </figure>
+                <div class="event-details">
+                    <h3 class="experience-title">Curso de JS</h3>
+                    <p class="event-description">Curso de Fundamentos de JS by Platzi</p>
+                    <a class="event-url" href="https://platzi.com">Ver Platzi</a>
+                </div>
+            </article>
+
+    </div>
+
+</div>
+    
+</body>
+</html>

@@ -29,13 +29,13 @@
         /* border-radius: 50%; */
 
         /* transition: .3s; */
-        animation-name: event, rebote;
-        animation-duration: 1s, .3s;
+        animation-name: event, rebote; /* rebote;*/
+        animation-duration: 2s, .3s;
         /* Delay para q empiece la animacion */
         /* animation-delay: 1s; */
         /* Cantidad de veces q se va ha animar */
         /* animation-iteration-count: 2; */
-        animation-iteration-count: infinite;
+        animation-iteration-count: infinite,20 ;
         /* Direccion de la animacion de 0 a 100 o de 100 a 0 */
         /* por defecto esta en normal */
         /* animation-direction: reverse; */
@@ -76,6 +76,15 @@
         }
     
     }
+    @keyframes escalera{
+        from{
+            transform: translateY(0)
+        }
+        to{
+            transform: translateY(500px)
+        }
+    }
+
     @keyframes rebote{
         /* o% */
         from {
@@ -93,7 +102,7 @@
 <body>
 <div class="event-list">
     <div class="container">
-        <article class="event">
+        <article class="event" id="event">
                 <figure class="events-image">
                     <img src="../image/Fox.SVG" width="600" height="500" alt="">
                 </figure>
@@ -107,6 +116,22 @@
     </div>
 
 </div>
+
+<script>
+    const $event = document.getElementById('event');
+    // $event.addEventListener('nombre del event',function)
+    // $event.addEventListener('animationstart', (event) => {
+    // $event.addEventListener('animationiteration', (event) => {
+
+    
+    $event.addEventListener('animationend', (event) => {
+        console.log(event.animationName);
+        if(event.animationName === 'rebote'){
+            $event.style.animationName ='event escalera';
+            $event.style.animationDuration = '3s' ;
+        }
+    })
+</script>
     
 </body>
 </html>

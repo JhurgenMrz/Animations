@@ -36,4 +36,41 @@
     /* transform: rotate3d(x,y,z,rotate); */
     transform: rotate3d(1,0,0,45deg)
 
+    /* Sintaxis de Animation */
+
+    Para crear una animación CSS usaremos la propiedad animation y sus sub-propiedades, con las cuales podemos configurar el ritmo, la duración, etc.
+
+    Las subpropiedades de animation son:
+    
+    animation-delay
+    Tiempo de retardo entre el momento en que el elemento se carga y el comienzo de la secuencia de la animación.
+    
+    animation-direction
+    Indica si la animación debe retroceder hasta el fotograma de inicio al finalizar la secuencia o si debe comenzar desde el principio al llegar al final.
+    
+    animation-duration
+    Indica la cantidad de tiempo que la animación consume en completar su ciclo (duración).
+    
+    animation-iteration-count
+    El número de veces que se repite. Podemos indicar infinite para repetir la animación indefinidamente.
+    
+    animation-name
+    Especifica el nombre de la regla @keyframes que describe los fotogramas de la animación.
+    
+    animation-play-state
+    Permite pausar y reanudar la secuencia de la animación.
+    
+    animation-timing-function
+    Indica el ritmo de la animación, es decir, como se muestran los fotogramas de la animación, estableciendo curvas de aceleración.
+    
+    animation-fill-mode
+    Especifica qué valores tendrán las propiedades después de finalizar la animación (los de antes de ejecutarla, los del último fotograma de la animación o ambos).
+
+    ease: por defecto
+    ease-in: se suaviza al entrar o al inicio
+    ease-out: se suaviza al salir o al finalizar
+    ease-in-out: se suaviza al entrar y salir, básicamente se acelera solo la mitad de la animación
+
+    steps(frames por segundo): como el lag en los juegos en linea (?), mientras más bajo será menos fluido
+
 }

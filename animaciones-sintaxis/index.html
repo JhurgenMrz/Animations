@@ -30,19 +30,12 @@
 
         /* transition: .3s; */
         animation-name: event;
-        animation-duration: 1s;
+        animation-duration: 2s;
         /* Delay para q empiece la animacion */
         /* animation-delay: 1s; */
         /* Cantidad de veces q se va ha animar */
         /* animation-iteration-count: 2; */
         animation-iteration-count: infinite;
-        /* como funciona el suavisado de la animacion */
-        animation-timing-function: ease;
-        /* animation-timing-function: ease-in; */
-        /* animation-timing-function: ease-out; */
-        /* animation-timing-function: linear; */
-        /* animation-timing-function: cubic-bezier(); */
-        
         /* Direccion de la animacion de 0 a 100 o de 100 a 0 */
         /* por defecto esta en normal */
         /* animation-direction: reverse; */
@@ -51,16 +44,25 @@
         /* que va a pasar despues de que termine la animacion */
         /* forwards es que mantenga las propiedades del final de la animacion */
         animation-fill-mode: forwards ;
-
+        
         /* Permite pausar y reanudar la secuencia de la animacion */
         /* por defecto viene runnig */
         /* animation-play-state: running; */
         /* animation-play-state: paused; */
-
+        
         position: relative;
+        
+        /* como funciona el suavisado de la animacion */
+        /* animation-timing-function: ease; */
+        /* animation-timing-function: ease-in; */
+        /* animation-timing-function: ease-out; */
+        animation-timing-function: linear;
+        /* animation-timing-function: steps(60); */
 
+        animation-timing-function: cubic-bezier(0,.76,1,.27);
+        
     }
-
+    
     @keyframes event{
         0%{
             /* opacity: 1; */

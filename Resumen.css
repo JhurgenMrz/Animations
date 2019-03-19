@@ -38,9 +38,9 @@
 
     /* Sintaxis de Animation */
 
-    Para crear una animación CSS usaremos la propiedad animation y sus sub-propiedades, con las cuales podemos configurar el ritmo, la duración, etc.
+    Para crear una animación CSS usaremos la propiedad animation y sus sub-propiedades, con las cuales podemos configurar el ritmo, la duración, etc
 
-    Las subpropiedades de animation son:
+    Las subpropiedades de animation son
     
     animation-delay
     Tiempo de retardo entre el momento en que el elemento se carga y el comienzo de la secuencia de la animación.
@@ -72,5 +72,35 @@
     ease-in-out: se suaviza al entrar y salir, básicamente se acelera solo la mitad de la animación
 
     steps(frames por segundo): como el lag en los juegos en linea (?), mientras más bajo será menos fluido
+
+    Otra herramienta que puede ser útil desde CSS3 es will-change.
+will-change prepara (avisa/notifica) al navegador para que al renderizar una animación no genere impresiones extra del objeto o imagen que ‘va a cambiar’.
+
+developer.mozilla.org nos advierte que will-change es para ser usado sólo como un último recurso en situaciones de problemas existentes de performance y no para ‘anticipar’ problemas.
+
+Dicho esto los recursos para los que will-changeestá optimizado son opacity y transform aunque mozilla agrega otros.
+
+Ejemplo de animacion en JS
+
+/* const caja=document.getElementById('caja')
+
+            //element.animate(keyframes = [], option = {})
+            caja.animate([
+                {
+                    transform: 'translatex(0)'
+                },
+                {
+                    transform: 'translate(380px)'
+                }
+            ], {
+                duration: 2000,
+                delay: 1000,
+                direction: 'normal',
+                easing: 'linear',
+                iterations:2,
+                fill: 'forwards',
+                iterationStart: .5
+                //endDelay: 5000;
+            }) */
 
 }

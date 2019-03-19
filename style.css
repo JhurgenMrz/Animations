@@ -29,6 +29,7 @@
     border-radius: 20px;
     overflow: hidden;
     background-color: rgb(55, 127, 235);
+    border-radius: 50%;
 }
 .events-image{
     margin: auto;

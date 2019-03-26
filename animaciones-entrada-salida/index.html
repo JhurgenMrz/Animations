@@ -51,7 +51,7 @@
         justify-content: center;
         opacity: 0;
         visibility: hidden;
-        transition: 1.1s ease-in; 
+        transition: 1.1s ease; 
     }
     .overlay.active{
         opacity: 1;
@@ -103,7 +103,7 @@
     </style>
 </head>
 <body>
-    <img src="platzi.png" alt="">
+    <img id="web" src="platzi.png" alt="">
     <div class="overlay active" id="overlay">
         <div class="modal" id="modal">
             <h1>Atención!</h1>
@@ -120,11 +120,35 @@
     const $hideButton = document.getElementById('hide-modal');
     const $modal = document.getElementById('modal');
     const $overlay = document.getElementById('overlay');
+    const $web = document.getElementById('web');
     $hideButton.addEventListener('click', (event)=>{
         // console.log(event);
-        $modal.style.animation = 'animationOut 600ms forwards'
+        $modal.style.animation = 'animationOut 700ms forwards'
         $overlay.classList.remove('active');
     })
+
+    $web.addEventListener('click',(event)=>{
+        $overlay.classList.add('active');
+        $modal.style.animation = 'animationIn 700ms forwards'
+    })
+
+    $overlay.addEventListener('click',(event)=>{
+        console.log(event.srcElement);
+
+        if(event.srcElement.classList == 'overlay active'){
+        hide();
+        }
+
+    })
+
+    function hide (){
+        $modal.style.animation = 'animationOut 700ms forwards';
+        $overlay.classList.remove('active');
+        
+    }
+
+    
+
 
 
 </script>
